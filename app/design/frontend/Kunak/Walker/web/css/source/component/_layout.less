@@ -1,0 +1,54 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  .page-header {
+    background: #000000;
+    
+    & a {
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  // .page-main {
+  //   background-color: #000000;
+  // }
+
+  .page-wrapper {
+    background-color: #000000;
+
+    & a {
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .page-header {
+
+    & .header.content {
+      
+      & .logo {
+        margin-left: 20vw;
+      }
+    }
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .page-header {
+    
+    & .panel.wrapper {
+      border-bottom: 0px solid #e8e8e8;
+    }
+  }
+}

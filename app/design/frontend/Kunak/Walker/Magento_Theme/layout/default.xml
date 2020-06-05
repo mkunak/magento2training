@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <body>
+    <referenceContainer name="header-wrapper">
+      <container name="logo-wrapper" htmlTag="div" htmlClass="logo-wrapper" after="logo"></container>
+    </referenceContainer>
+    <referenceBlock name="logo">
+      <arguments>
+        <argument name="logo_file" xsi:type="string">images/nw_logo.png</argument>
+        <argument name="logo_width" xsi:type="number">330</argument>
+        <!-- <argument name="logo_height" xsi:type="number">300</argument> -->
+        <argument name="logo_alt" xsi:type="string">Walker Logo</argument>
+      </arguments>
+    </referenceBlock>
+    <move element="logo" destination="logo-wrapper" />
+    <referenceBlock name="content">
+      <block class="Magento\Framework\View\Element\Template" name="magento.theme.content.container" template="Magento_Theme::content.phtml" />
+    </referenceBlock>
+  </body>
+</page>
