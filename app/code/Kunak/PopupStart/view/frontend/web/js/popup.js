@@ -1,8 +1,7 @@
 define(
   [
     'jquery',
-    'Magento_Ui/js/modal/modal',
-    'mage/translate'
+    'Magento_Ui/js/modal/modal'
   ],
   function ($) {
     "use strict";
@@ -12,21 +11,18 @@ define(
         modalForm: '#popup',
         modalButton: '.popup-open'
       },
-
       _create: function () {
         this.options.modalOption = this.getModalOptions();
         this._bind();
       },
-
       getModalOptions: function () {
         /** * Modal options */
         var options = {
-          type: 'slide',
+          type: 'popup',
           responsive: true,
           clickableOverlay: false,
           title: $.mage.__('PopUp'),
           modalClass: 'popup',
-          // modalContent: $.mage.__('Modal Content from popup.js'),
           buttons: [{
             text: $.mage.__('Yes, I got you!'),
             class: '',
